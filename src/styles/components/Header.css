@@ -1,0 +1,34 @@
+.Header {
+  width: 100wv;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  align-items: center;
+}
+.Header h1{
+  color: #ac1f1f;
+  font-size: 60px;
+}
+.Header .buscador {
+  border-radius: 15px;
+  height: 40px;
+  width: 350px;
+  background: none;
+  border: 2px white solid ;
+  display: flex;
+}
+.Header .buscador input{
+  color: antiquewhite;
+  height: 100%;
+  width: inherit;
+  border-style: none;
+  background: none;
+  font-size: 18px;
+  padding: 0 5px;
+  outline: none;
+}
+.Header .buscador img{
+  height: 100%;
+}

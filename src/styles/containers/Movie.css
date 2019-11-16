@@ -1,0 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.Container-Movie{
+  padding-left: 60px;
+  background: rgb(27, 27, 27);
+}

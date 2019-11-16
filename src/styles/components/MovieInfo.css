@@ -1,0 +1,16 @@
+.Container-MovieInfo{
+  color: white;
+  width: 60%;
+  padding: 30px;
+
+}
+.MovieInfo-Referencias{
+  margin: 10px 0;
+  display: flex;
+}
+.MovieInfo-Referencias > h4{
+  padding: 0 10px;
+}
+.MovieInfo-texto > p{
+  padding: 10px 0;
+}
