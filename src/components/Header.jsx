@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import "../styles/components/Header.css"
 import LogoLupa from "../static/icons8-google-web-search-200.png"
@@ -12,7 +13,7 @@ const people = [
   "Linkedin",
   "Sinkedin"
 ];
-const Header = () => {
+const Header = props => {
   const [searchTerm, setSearchTerm] = useState("");
   // const [searchResults, setSearchResults] = useState([]);
   const handleChange = event => {
@@ -45,4 +46,15 @@ const Header = () => {
     </div>
   )
 }
-export default Header
+
+onst mapStateToProps = state => {
+  return {
+    user: state.user
+  };
+};
+
+const mapDispatchToProps = {
+  logoutRequest,
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
