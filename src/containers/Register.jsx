@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { registerRequest } from '../actions';
 import { Link } from 'react-router-dom';
 import '../styles/containers/Register.css';
@@ -63,4 +64,4 @@ const mapDispatchToProps = {
   registerRequest,
 };
 
-export default Register;
+export default connect(null, mapDispatchToProps)(Register);

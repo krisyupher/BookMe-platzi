@@ -32,3 +32,60 @@
 .Header .buscador img{
   height: 100%;
 }
+
+.header__menu {
+	margin-right: 355px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px 264px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+	display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--notifications p{
+  display: flex;
+}
+
+.header__menu--profile {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.header__menu--profile p{
+  padding: 1em;
+}
+
+.header__menu--profile a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__menu--profile img {
+  margin-right: -335px;
+  width: 40px;
+  border-radius: 100%;
+  object-fit: cover;
+}

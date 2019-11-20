@@ -1,11 +1,12 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
+import Movie from "../containers/Movie"
 import Login from "../containers/Login"
 import Register from "../containers/Register"
-import Movie from "../containers/Movie"
 import ContainerMovieData from "../containers/ContainerMovieData"
 import Layout from "../components/Layout"
 import NotFound from "../components/NotFound"
+
 const App = () => (
   <BrowserRouter>
     <Layout>
@@ -20,4 +21,4 @@ const App = () => (
   </BrowserRouter>
 )
 
-export default App
+export default App;

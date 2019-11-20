@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import Carousel from "../components/Carousel"
 import CarouselItem from "../components/CarouselItem"
 import "../styles/containers/Movie.css"
@@ -70,4 +71,13 @@ const Movie = () => {
 		</div>
 	);
 }
-export default Movie;
+
+const mapStateToProps = state => {
+	return{
+	  DataPageOne: state.DataPageOne,
+	  DataPageTwo: state.DataPageTwo,
+	  DataPageThree: state.DataPageThree,
+	  };
+  };
+
+export default connect(mapStateToProps, null)(Movie);

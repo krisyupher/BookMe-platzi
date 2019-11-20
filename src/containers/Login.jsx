@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginRequest } from '../../src/actions';
 import '../../src/styles/containers/Login.css';
@@ -71,4 +72,4 @@ const mapDispatchToProps = {
   loginRequest,
 };
 
-export default Login;
+export default connect(null, mapDispatchToProps)(Login);
