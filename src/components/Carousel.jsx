@@ -21,7 +21,7 @@ const Carousel = ({ children, titleCategory, slideIndex }) => {
       </div>
       <div className="carousel__container">
         <Whirligig
-          visibleSlides={5}
+          visibleSlides={6}
           gutter="1em"
           preventScroll={true}
           ref={(_whirligigInstance) => { whirligig = _whirligigInstance }}

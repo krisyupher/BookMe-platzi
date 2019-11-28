@@ -3,70 +3,27 @@ import Carousel from "../components/Carousel"
 import CarouselItem from "../components/CarouselItem"
 import "../styles/containers/Movie.css"
 
-
 const Movie = () => {
-	const [DataPageOne, setDataPageOne] = useState();
-	const [DataPageTwo, setDataPageTwo] = useState();
-	const [DataPageThree, setDataPageThree] = useState();
-
+	let [DataPage, setDataPage] = useState([]);
 
 	useEffect(() => {
-		const CargarPageOne = async () => {
-			let respuesta = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=ce322f54257cc9286282b320c5e9b2a0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1");
+		const CargarPage = async (page) => {
+			let respuesta = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=ce322f54257cc9286282b320c5e9b2a0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`);
 			let respuestaJSON = await respuesta.json();
-			setDataPageOne(respuestaJSON);
+			setDataPage(DataPage => [...DataPage, respuestaJSON])
 		};
-		CargarPageOne();
-		const CargarPageTwo = async () => {
-			let respuesta = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=ce322f54257cc9286282b320c5e9b2a0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=2");
-			let respuestaJSON = await respuesta.json();
-			setDataPageTwo(respuestaJSON);
-		};
-		CargarPageTwo();
-		const CargarPageThree = async () => {
-			let respuesta = await fetch("https://api.themoviedb.org/3/discover/movie?api_key=ce322f54257cc9286282b320c5e9b2a0&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=3");
-			let respuestaJSON = await respuesta.json();
-			setDataPageThree(respuestaJSON);
-		};
-		CargarPageThree();
+		CargarPage(1)
+		CargarPage(2)
+		CargarPage(3)
+
 	}, []);
-
-	if (!DataPageOne) {
-		return <div> Loading... </div>
-	}
-	if (!DataPageTwo) {
-		return <div> Loading... </div>
-	}
-	if (!DataPageThree) {
-		return <div> Loading... </div>
-	}
-
 	return (
 		<div className="Container-Movie">
-			<Carousel titleCategory="My list">
-				{typeof DataPageOne.results !== "undefined" &&
-					DataPageOne.results.map((movie, index) => {
-						return (
-							<CarouselItem title={movie.title} poster={movie.poster_path} id={movie.id} key={movie.id}/>
-						)
-					})}
-			</Carousel>
-			<Carousel titleCategory="Ahora">
-				{typeof DataPageTwo.results !== "undefined" &&
-					DataPageTwo.results.map((movie, index) => {
-						return (
-							<CarouselItem title={movie.title} poster={movie.poster_path} id={movie.id} key={movie.id}/>
-						)
-					})}
-			</Carousel>
-			<Carousel titleCategory="Tendencias">
-				{typeof DataPageThree.results !== "undefined" &&
-					DataPageThree.results.map((movie, index) => {
-						return (
-							<CarouselItem title={movie.title} poster={movie.poster_path} id={movie.id} key={movie.id}/>
-						)
-					})}
-			</Carousel>
+			{DataPage.map((pelicula) =>
+				<Carousel key={pelicula.page} titleCategory="My list">
+					{pelicula.results.map((movie) =>
+						<CarouselItem title={movie.title} poster={movie.poster_path} id={movie.id} key={movie.id} />)}
+				</Carousel>)}
 		</div>
 	);
 }

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react"
-import { Link } from 'react-router-dom';
+import React, { useState } from "react"
+import { NavLink } from 'react-router-dom';
 import "../styles/components/Header.css"
 import LogoLupa from "../static/icons8-google-web-search-200.png"
 
-const people = [
-  "Siri",
-  "Alexa",
-  "Google",
-  "Facebook",
-  "Twitter",
-  "Linkedin",
-  "Sinkedin"
-];
+// const people = [
+//   "Siri",
+//   "Alexa",
+//   "Google",
+//   "Facebook",
+//   "Twitter",
+//   "Linkedin",
+//   "Sinkedin"
+// ];
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState("");
   // const [searchResults, setSearchResults] = useState([]);
@@ -26,9 +26,9 @@ const Header = () => {
   // }, [searchTerm]);
   return (
     <div className="Header">
-      <Link to="/movie" style={{ textDecoration: 'none' }}>
+      <NavLink to="/movie" style={{ textDecoration: 'none' }}>
         <h1>BookMe</h1>
-      </Link>
+      </NavLink>
       <div className="buscador">
         <img src={LogoLupa} alt="Logo Buscar"></img>
         <input

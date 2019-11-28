@@ -7,7 +7,9 @@ import MovieSeat from "../components/MovieSeat"
 import "../styles/containers/ContainerMovieData.css"
 const ContainerMovieData = (props) => {
   const [page, setPage] = useState(1);
-  const { match: { params } } = props;
+  const [Cinemas, setCinema] = useState(["Procinal Tunal","Procinal IMAX Plaza De Las Américas","Cinemateca Distrital","Cine Tonalá","Cine Royal Films","Cinepolis Calima"]);
+
+  const { match: { params } } = props; //traer dtos de la url
   const [DataMovieById, setDataMovieById] = useState();
 
   useEffect(() => {
@@ -36,7 +38,9 @@ const ContainerMovieData = (props) => {
           />
         }
         {page === 2 &&
-          <Cinema />
+          <Cinema
+            ListaCinemas={Cinemas}
+          />
         }
         {page === 3 &&
           <MovieSeat />

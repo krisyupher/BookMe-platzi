@@ -2,5 +2,65 @@
   color: white;
   width: 60%;
   padding: 30px;
-
+}
+.MovieSeat-Container-seats{
+  display: flex;
+}
+.MovieSeat-Container_red{
+  background: rgb(155, 99, 99);
+  width: 30px;
+  height: 30px;
+  border: 7px solid rgb(134, 30, 30);
+  border-right-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  margin: 5px;
+}
+.MovieSeat-Container_gray{
+  background: rgb(230, 230, 230);
+  width: 30px;
+  height: 30px;
+  border: 7px solid rgb(192, 192, 192);
+  border-right-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  margin: 5px;
+}
+.MovieSeat-Container_transparend{
+  background: transparent;
+  width: 30px;
+  height: 30px;
+  border: 7px solid transparent;
+  border-right-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  margin: 5px;
+}
+.MovieSeat-Container_gray:hover{
+  background: rgb(44, 141, 145);
+  width: 30px;
+  height: 30px;
+  border: 7px solid rgb(27, 68, 92);
+  border-right-color: rgb(27, 27, 27);
+  border-radius: 5px;
+  margin: 5px;
+}
+.MovieSeat-Asientos{
+  margin-top: 10px;
+}
+.MovieSeat-Asientos_gray{
+  display: flex;
+  align-items: center;
+}
+.MovieSeat-Asientos_red{
+  display: flex;
+  align-items: center;
+}
+.Boton-Apartar{
+  background-color: #4CAF50; /* Green */
+  border: 1px;
+  border-radius: 15%;
+  color: white;
+  padding: 20px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
