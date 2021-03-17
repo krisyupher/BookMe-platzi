@@ -1,25 +1,33 @@
 .Header {
   width: 100wv;
-  height: 80px;
+  min-height: 80px;
   background-color: black;
   display: flex;
   justify-content: space-between;
-  padding: 10px 60px;
+  padding: 10px 5%;
   align-items: center;
+  flex-wrap: wrap;
+  .buscador {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    .FontAwesomeIcon {
+      color: white;
+    }
+  }
 }
-.Header h1{
+.Header h1 {
   color: #ac1f1f;
   font-size: 60px;
 }
 .Header .buscador {
   border-radius: 15px;
   height: 40px;
-  width: 350px;
   background: none;
-  border: 2px white solid ;
+  border: 2px white solid;
   display: flex;
 }
-.Header .buscador input{
+.Header .buscador input {
   color: antiquewhite;
   height: 100%;
   width: inherit;
@@ -29,6 +37,6 @@
   padding: 0 5px;
   outline: none;
 }
-.Header .buscador img{
+.Header .buscador img {
   height: 100%;
 }

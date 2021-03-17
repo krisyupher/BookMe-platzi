@@ -1,10 +1,10 @@
-import React from 'react'
-import '../styles/components/Cinema.css'
+import React from "react";
+import "../styles/components/Cinema.css";
 
 const Cinema = () => {
   return (
     <div className="Container-Cinema">
-      <h3>Escoge tu cine mas cercano</h3>
+      <h3>choose your nearest cinema</h3>
       <div className="Cinema-Place">
         <div className="Cinema-Tittle">
           <h3>Titan Plaza</h3>
@@ -36,6 +36,6 @@ const Cinema = () => {
         </div>
       </div>
     </div>
-  )
-}
-export default Cinema
+  );
+};
+export default Cinema;
