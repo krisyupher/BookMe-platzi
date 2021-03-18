@@ -34,9 +34,19 @@
       transform: rotate(90deg);
     }
   }
-
   .carousel__container {
-    display: flex;
-    width: inherit;
+    &:hover {
+      .posterContainer {
+        opacity: 0.3;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .childContainer {
+      overflow-y: hidden;
+      display: flex;
+      width: inherit;
+    }
   }
 }

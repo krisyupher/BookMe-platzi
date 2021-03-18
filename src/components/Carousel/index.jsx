@@ -25,6 +25,7 @@ const Carousel = ({ children, titleCategory, slideIndex }) => {
           ref={(_whirligigInstance) => {
             whirligig = _whirligigInstance;
           }}
+          className="childContainer"
         >
           {children}
         </Whirligig>
